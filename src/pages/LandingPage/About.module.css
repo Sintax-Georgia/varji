@@ -1,0 +1,27 @@
+.aboutUsContainer {
+  display: flex;
+  margin-top: 8rem;
+  width: 90%;
+  height: 60vh;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  box-shadow: 0 0 5px 3px var(--secondary-color);
+}
+/* .aboutUsContainer:hover {
+} */
+.aboutUs {
+  padding: 4rem 2rem;
+  width: 50%;
+}
+
+.imgContainer {
+  width: 50%;
+}
+.aboutUsImg {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}

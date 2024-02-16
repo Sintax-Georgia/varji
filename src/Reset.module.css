@@ -1,0 +1,41 @@
+/* reset.module.css */
+
+/* Reset all margins, padding, and borders to zero */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+/* Set default font family and size */
+body {
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+}
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+/* Reset default heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: normal;
+}
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* Remove default button styles */
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+/* Additional resets can be added as needed */

@@ -1,0 +1,12 @@
+.LandingPage {
+  background-color: #f7f9f9;
+  width: 90%;
+  margin: auto;
+}
+
+.coverImg {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  aspect-ratio: 16/9;
+}
