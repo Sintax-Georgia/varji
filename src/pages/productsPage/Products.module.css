@@ -1,0 +1,27 @@
+.textureContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.textureContainer img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.woodName {
+  text-align: center;
+}
+.tableHeading {
+  margin: 5rem 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+.table {
+  width: 100%;
+  margin-bottom: 5rem;
+}

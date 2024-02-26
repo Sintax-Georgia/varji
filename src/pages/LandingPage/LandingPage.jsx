@@ -3,6 +3,7 @@ import Carousel from "../../layouts/carousel/Carousel";
 import About from "./About";
 import styles from "./LandingPage.module.css";
 import { motion } from "framer-motion";
+import Partners from "./Partners";
 function LandingPage() {
   const variants = {
     initial: { clipPath: "inset(0% 50% 0% 50%)" },
@@ -25,6 +26,7 @@ function LandingPage() {
       </div>
       <About />
       <Carousel />
+      <Partners />
     </div>
   );
 }

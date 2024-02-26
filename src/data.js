@@ -14,3 +14,5 @@ export const footerData = [
     ],
   },
 ];
+
+// export const productData = [{}];

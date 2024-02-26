@@ -24,11 +24,14 @@
 
 .navLinks {
   display: flex;
-  gap: 20px;
+  position: relative;
+  gap: 2.5rem;
   color: #fff;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  list-style-type: none;
+  padding: 0;
 }
 .link {
   padding: 0.2rem;
@@ -40,4 +43,60 @@
 .active {
   color: var(--secondary-color);
   text-shadow: 1px 1px 10px var(--main-color);
+}
+
+.iconsContainer {
+  display: flex;
+  width: 9rem;
+  justify-content: end;
+  align-items: center;
+  gap: 2rem;
+}
+svg {
+  color: white;
+
+  cursor: pointer;
+}
+.fbIcon {
+  color: white;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.fbIcon:hover {
+  scale: 1.1;
+}
+
+.menuIcon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.menuIcon:hover {
+  animation: menu 1s ease;
+}
+
+.fbContainer {
+  display: flex;
+  justify-content: end;
+  /* width: 9rem; */
+}
+.homeLinks {
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+@keyframes menu {
+  0% {
+    scale: 1;
+    rotate: 0;
+  }
+  50% {
+    scale: 1.2;
+    rotate: 90deg;
+  }
+  100% {
+    scale: 1;
+    rotate: 0;
+  }
 }

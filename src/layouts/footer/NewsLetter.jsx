@@ -17,7 +17,7 @@ function NewsLetter() {
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
       <div className={styles.inputContainer}>
         <label htmlFor="name" className={styles.inputLabel}>
-          Subscribe
+          Get a quote
         </label>
         <div className={styles.errorMsgContainer}>
           <input
