@@ -1,8 +1,9 @@
 // import { Link } from "react-router-dom";
 import styles from "./About.module.css";
 import aboutUs from "../../assets/about-us.webp";
+import { NavLink } from "react-router-dom";
 
-function About() {
+function About({ needsButton }) {
   return (
     <div className={styles.aboutUsContainer} id="about">
       <div className={styles.aboutUs}>
@@ -15,6 +16,11 @@ function About() {
           ევროპისა და აზიის ბაზრის მოთხოვნებს და კომპანია ექსპორტს სხვადასხვა
           ქვეყნებში ეწევა.
         </p>
+        {needsButton && (
+          <NavLink to={"/about"}>
+            <button className={styles.seeMoreBtn}>მეტის ნახვა</button>
+          </NavLink>
+        )}
         {/* <Link to="/about">
           <button className={styles.button}>See more</button>
         </Link> */}

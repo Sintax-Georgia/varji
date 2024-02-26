@@ -3,6 +3,7 @@ import germany from "../../assets/germany.webp";
 import serbia from "../../assets/serbia.webp";
 import austria from "../../assets/austria.webp";
 import styles from "./LandingPage.module.css";
+import CustomHeading from "../../helpers/CustomHeading";
 
 const partners = [
   { src: israel, id: 1 },
@@ -14,7 +15,7 @@ const partners = [
 function Partners() {
   return (
     <>
-      <h2 className={styles.partnersHeading}>Export Countries</h2>
+      <CustomHeading>Export Countries</CustomHeading>
       <div className={styles.partnersContainer}>
         {partners.map((partner) => (
           <img

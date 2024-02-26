@@ -6,6 +6,7 @@ import eucaliptus from "../../assets/eucaliptus.webp";
 import pine from "../../assets/pine.webp";
 import chestnut from "../../assets/chestnut.webp";
 import styles from "./Products.module.css";
+import CustomHeading from "../../helpers/CustomHeading";
 
 const textures = [
   { src: beech, id: 1, name: "წიფელი" },
@@ -18,17 +19,17 @@ const textures = [
 function Products() {
   return (
     <>
-      <h2>ჩვენი პროდუქცია</h2>
+      <CustomHeading>ჩვენი პროდუქცია</CustomHeading>
       <div>
         <Carousel />
       </div>
-      <h2 className={styles.tableHeading}>ჩვენი მასალა</h2>
+      <CustomHeading>მასალა, რომელსაც ვიყენებთ</CustomHeading>
       <div className={styles.textureContainer}>
         <table className={styles.table}>
           <thead>
             <tr>
               {textures.map((wood) => (
-                <th key={wood.id}>
+                <th key={wood.id} className={styles.tableHeader}>
                   <img src={wood.src} alt="wood texture" />
                 </th>
               ))}

@@ -1,10 +1,11 @@
 .aboutUsContainer {
   display: flex;
   width: 90%;
-  height: 60vh;
+  min-width: 49rem;
+  height: auto;
   border-radius: 2rem;
   margin: auto;
-  margin-top: 8rem;
+  margin-bottom: 2rem;
   background-color: var(--main-color);
 }
 
@@ -33,4 +34,27 @@
   border-bottom-right-radius: 2rem;
   aspect-ratio: 16/9;
   object-fit: cover;
+}
+
+.seeMoreBtn {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+.seeMoreBtn:hover {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  transform: scale(1.1);
+}
+.seeMoreBtn:active {
+  transform: scale(0.9);
 }

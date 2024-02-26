@@ -3,3 +3,9 @@
   flex-direction: column;
   /* justify-content: space-between; */
 }
+.customHeading {
+  font-size: 2rem;
+  color: var(--main-color);
+  text-align: center;
+  font-weight: 600;
+}

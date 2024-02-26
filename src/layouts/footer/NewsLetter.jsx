@@ -12,7 +12,6 @@ function NewsLetter() {
     console.log(data);
     reset();
   }
-  console.log(errors.name);
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
       <div className={styles.inputContainer}>

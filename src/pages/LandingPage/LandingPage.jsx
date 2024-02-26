@@ -24,7 +24,7 @@ function LandingPage() {
           alt="cover image"
         />
       </div>
-      <About />
+      <About needsButton={true} />
       <Carousel />
       <Partners />
     </div>

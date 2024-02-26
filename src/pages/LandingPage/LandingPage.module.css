@@ -2,6 +2,7 @@
   background-color: #f7f9f9;
   width: 90%;
   margin: auto;
+  margin-bottom: 5rem;
 }
 
 .coverImg {
@@ -11,13 +12,13 @@
   aspect-ratio: 16/9;
   height: 80vh;
 }
-.partnersHeading {
+/* .partnersHeading {
   font-size: 2rem;
   color: var(--main-color);
   text-align: center;
   font-weight: 600;
   margin-top: 5rem;
-}
+} */
 .partnersContainer {
   margin: 5rem 0;
   display: flex;

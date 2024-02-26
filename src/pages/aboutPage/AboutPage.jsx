@@ -3,7 +3,7 @@ import About from "../LandingPage/About";
 function AboutPage() {
   return (
     <div>
-      <About />
+      <About needsButton={false} />
     </div>
   );
 }
