@@ -1,5 +1,6 @@
 // import { Link } from "react-router-dom";
 import styles from "./About.module.css";
+import aboutUs from "../../assets/about-us.webp";
 
 function About() {
   return (
@@ -19,10 +20,7 @@ function About() {
         </Link> */}
       </div>
       <div className={styles.imgContainer}>
-        <img
-          className={styles.aboutUsImg}
-          src="../../src/assets/about-us.webp"
-        />
+        <img className={styles.aboutUsImg} src={aboutUs} />
       </div>
     </div>
   );
