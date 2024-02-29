@@ -11,7 +11,7 @@ import pellets from "../../assets/pellets.webp";
 import magida from "../../assets/magidis-zedapiri.webp";
 import styles from "./ProductDetails.module.css";
 import CustomHeading from "../../helpers/CustomHeading";
-import ruf from "../../assets/ruf.webp";
+// import ruf from "../../assets/ruf.webp";
 
 const productData = [
   {
@@ -28,7 +28,7 @@ const productData = [
   },
   {
     heading: "საწვავი მასალა",
-    imgUrl: [ruf, pellets, pinikey],
+    imgUrl: [pellets, pinikey],
     id: 6,
     text: "ვარჯი აწარმოებს სამი სახის საწვავ მასალას: ",
   },
