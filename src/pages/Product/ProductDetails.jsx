@@ -6,12 +6,12 @@ import paneli2 from "../../assets/avejis-paneli-2.webp";
 import kibe from "../../assets/kibe.webp";
 import parketi from "../../assets/masiuri-parketi.webp";
 import parketi2 from "../../assets/parketi2.webp";
-import ruf from "../../assets/ruf.webp";
 import pinikey from "../../assets/pinikey.webp";
 import pellets from "../../assets/pellets.webp";
 import magida from "../../assets/magidis-zedapiri.webp";
 import styles from "./ProductDetails.module.css";
 import CustomHeading from "../../helpers/CustomHeading";
+import ruf from "../../assets/ruf.webp";
 
 const productData = [
   {
