@@ -22,14 +22,14 @@ import "./styles.css";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 const imgs = [
-  { src: wifeli, id: 1 },
-  { src: paneli, id: 2 },
-  { src: kibe, id: 3 },
-  { src: parketi, id: 4 },
-  { src: parketi2, id: 5 },
-  { src: briketi, id: 6 },
-  { src: paneli2, id: 7 },
-  { src: magida, id: 8 },
+  { src: wifeli, id: 1, name: "წიფელის ფიცარი" },
+  { src: paneli, id: 2, name: "საავეჯე პანელი" },
+  { src: kibe, id: 3, name: "ხის საფეხურები" },
+  { src: parketi, id: 4, name: "მასიური პარკეტი" },
+  { src: parketi2, id: 5, name: "ორშრიანი პარკეტი" },
+  { src: briketi, id: 6, name: "საწვავი ბრიკეტი" },
+  { src: paneli2, id: 7, name: "საავეჯე პანელი" },
+  { src: magida, id: 8, name: "მაგიდის ზედაპირი" },
 ];
 
 export default function Carousel() {
@@ -52,7 +52,7 @@ export default function Carousel() {
       >
         {imgs.map((img) => (
           <SwiperSlide key={img.id}>
-            <Image src={img.src} alt={img.id} id={img.id} />
+            <Image src={img.src} alt={img.id} id={img.id} name={img.name} />
           </SwiperSlide>
         ))}
       </Swiper>

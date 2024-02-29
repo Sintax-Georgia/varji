@@ -3,6 +3,7 @@
   width: 90%;
   min-width: 49rem;
   height: auto;
+  min-height: 70vh;
   border-radius: 2rem;
   margin: auto;
   margin-bottom: 2rem;
@@ -21,18 +22,21 @@
 }
 .aboutUsText {
   color: white;
-  font-size: 1rem;
-  line-height: 1.7rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 .imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
 }
 .aboutUsImg {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
-  aspect-ratio: 16/9;
+  aspect-ratio: 1/1;
   object-fit: cover;
 }
 
@@ -42,7 +46,7 @@
   color: var(--secondary-color);
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
-  color: #ffffff;
+  color: var(--secondary-color);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -51,8 +55,8 @@
   margin-top: 1rem;
 }
 .seeMoreBtn:hover {
-  background-color: var(--secondary-color);
-  color: var(--main-color);
+  background-color: rgba(211, 165, 82, 0.5);
+  color: white;
   transform: scale(1.1);
 }
 .seeMoreBtn:active {
