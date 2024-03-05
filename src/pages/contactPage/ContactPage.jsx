@@ -6,34 +6,41 @@ import { ImMobile } from "react-icons/im";
 import { BsWatch } from "react-icons/bs";
 import { ImLocation } from "react-icons/im";
 import { IoMailOpen } from "react-icons/io5";
-const PHONE_NUMBER = "+995 555 123 123";
+import NewsLetter from "../../layouts/footer/NewsLetter";
+const PHONE_NUMBER = "+995 597 91 10 60";
 const contactData = [
   { icon: <ImMobile />, heading: "დაგვიკავშირდით", text: PHONE_NUMBER },
   { icon: <BsWatch />, heading: "სამუშაო საათები", text: "09:00-18:00" },
   { icon: <ImLocation />, heading: "მისამართი", text: "ანანური" },
-  { icon: <IoMailOpen />, heading: "მეილი", text: "varji@xarji.com.ge" },
+  { icon: <IoMailOpen />, heading: "მეილი", text: "wood@varji.ge" },
   {
     icon: <IoLogoFacebook />,
     heading: "ფბ გვერდი",
-    text: "facebook.com/varjiEnterprises",
+    text: "https://www.facebook.com/varjiwood",
   },
 ];
 
 function ContactPage() {
   return (
     <div className={styles.contactContainer}>
-      <div className={styles.contactInfo}>
-        {contactData.map((info) => (
-          <div className={styles.infoContainer} key={info.heading}>
-            <span className={styles.iconContainer}>{info.icon}</span>
-            <div className={styles.textContainer}>
-              <h3>{info.heading}</h3>
-              <span>{info.text}</span>
+      <CustomHeading>დაგვიკავშირდით</CustomHeading>
+      <div className={styles.contactInformation}>
+        <div className={styles.contactBullets}>
+          {contactData.map((info) => (
+            <div className={styles.infoContainer} key={info.heading}>
+              <span className={styles.iconContainer}>{info.icon}</span>
+              <div className={styles.textContainer}>
+                <h3>{info.heading}</h3>
+                <span>{info.text}</span>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <NewsLetter />
       </div>
-      <Map />
+      <div>
+        <Map />
+      </div>
     </div>
   );
 }

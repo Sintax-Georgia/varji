@@ -10,9 +10,7 @@ function Footer() {
         <NavLink to="/">
           <Logo />
         </NavLink>
-        <div className={styles.formContainer}>
-          <NewsLetter />
-        </div>
+
         <FooterList />
       </div>
       {/* <div>

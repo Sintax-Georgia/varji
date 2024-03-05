@@ -33,11 +33,11 @@ const Map = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <TileLayer
+        {/* <TileLayer
           url="https://{s}.tile.openstreetmap.ge/ge/{z}/{x}/{y}.png"
           maxZoom={18}
           attribution='&copy; <a href="https://www.openstreetmap.ge">OpenStreetMap Georgia</a>'
-        />
+        /> */}
         <Marker position={[42.170171, 44.695986]}>
           <Popup>აქ ვართ {`${"<3"}`}</Popup>
         </Marker>
