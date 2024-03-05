@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Firago-medium";
-  src: local("Firago-medium") url("../../fonts/FiraGO-Medium.otf")
+  src: local("Firago-medium") url("/src/fonts/FiraGO-Medium.otf")
     format("opentype");
 }
 .imagContainer {
