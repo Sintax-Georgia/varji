@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import styles from "./Image.module.css";
 import React from "react";
-import "../../fonts/FiraGo-Medium.otf";
 
 function Image({ src, alt, id, name }) {
   const navigate = useNavigate();
