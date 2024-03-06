@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "Firago-medium";
-  src: local("Firago-Medium") url("/src/fonts/FiraGO-Medium.otf")
-    format("opentype");
-}
 .imagContainer {
   position: relative;
   display: flex;

@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import wifeli from "../../assets/wifeli.webp";
 import briketi from "../../assets/briketi.webp";
 import paneli from "../../assets/avejis-paneli.webp";
@@ -33,29 +35,97 @@ const imgs = [
 ];
 
 export default function Carousel() {
+  const [isTablet, setIsTablet] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  function handleResize() {
+    if (window.innerWidth < 800) {
+      setIsTablet(true);
+    } else {
+      setIsTablet(false);
+    }
+    if (window.innerWidth < 500) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isTablet]);
   return (
     <div className={StyleSheet.carouselContainer} id="products">
-      <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation, Autoplay]}
-        className="mySwiper"
-      >
-        {imgs.map((img) => (
-          <SwiperSlide key={img.id}>
-            <Image src={img.src} alt={img.id} id={img.id} name={img.name} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      {!isTablet ? (
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation, Autoplay]}
+          className="mySwiper"
+        >
+          {imgs.map((img) => (
+            <SwiperSlide key={img.id}>
+              <Image src={img.src} alt={img.id} id={img.id} name={img.name} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      ) : !isMobile ? (
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={30}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation, Autoplay]}
+          className="mySwiper"
+        >
+          {imgs.map((img) => (
+            <SwiperSlide key={img.id}>
+              <Image src={img.src} alt={img.id} id={img.id} name={img.name} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      ) : (
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation, Autoplay]}
+          className="mySwiper"
+        >
+          {imgs.map((img) => (
+            <SwiperSlide key={img.id}>
+              <Image src={img.src} alt={img.id} id={img.id} name={img.name} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
     </div>
   );
 }

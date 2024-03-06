@@ -28,3 +28,22 @@
   min-width: 10rem;
   height: 10rem;
 }
+
+@media only screen and (max-width: 800px) {
+  .LandingPage {
+    width: 100%;
+  }
+  .coverImg {
+    height: auto;
+  }
+  .partnersContainer {
+    flex-wrap: wrap;
+  }
+  .partnersContainer img {
+    min-width: 7rem;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+}
