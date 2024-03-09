@@ -1,7 +1,7 @@
-import styles from "./Footer.module.css";
+import styles from "./GetInTouch.module.css";
 import { useForm } from "react-hook-form";
 
-function NewsLetter() {
+function GetInTouch() {
   const {
     register,
     handleSubmit,
@@ -88,10 +88,10 @@ function NewsLetter() {
       </div>
 
       <div className={styles.buttonContainer}>
-        <button className={styles.button}>SEND</button>
+        <button className={styles.button}>გაგზავნა</button>
       </div>
     </form>
   );
 }
 
-export default NewsLetter;
+export default GetInTouch;

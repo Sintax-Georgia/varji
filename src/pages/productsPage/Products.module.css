@@ -18,10 +18,20 @@
 }
 .table {
   width: 100%;
-  margin: 5rem 0;
+  margin-bottom: 5rem;
 }
 
-.tableHeader {
-  /* background-color: var(--main-color); */
-  pointer-events: none;
+.tableContent {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.woodContainer {
+  text-align: center;
+}
+.woodName {
+  color: var(--main-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }

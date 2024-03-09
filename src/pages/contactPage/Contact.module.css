@@ -16,6 +16,7 @@
 .infoContainer {
   display: flex;
   border-bottom: 1px solid var(--secondary-color);
+  border-right: 0;
   /* justify-content: space-between; */
 }
 .infoContainer:last-child {
@@ -30,6 +31,7 @@
   display: flex;
   border: 2px solid var(--secondary-color);
   background-color: var(--main-color);
+  border-right: none;
 }
 
 .iconContainer {
@@ -40,6 +42,7 @@
   height: 3rem;
   border-radius: 50%;
   border: 1px solid var(--secondary-color);
+  border-right: 0;
   margin: 1.2rem;
 }
 .iconContainer svg {
@@ -61,4 +64,24 @@
     fill: var(--main-color);
     cursor: auto;
   }
+}
+
+@media only screen and (max-width: 800px) {
+  .contactContainer {
+    width: 100%;
+  }
+  .contactInformation {
+    flex-direction: column;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+  .contactBullets {
+    width: 100%;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 0;
+    min-width: 20rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
 }

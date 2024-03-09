@@ -11,18 +11,18 @@ import { IoLogoFacebook } from "react-icons/io5";
 import { IoMenu } from "react-icons/io5";
 
 function Navigation() {
-  const [hidden, setHidden] = useState(false);
+  // const [hidden, setHidden] = useState(false);
   const [isGreater, setIsGreater] = useState(false);
-  const [isHome, setIsHome] = useState(false);
-  const { scrollY } = useScroll();
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious();
-    if (latest > previous) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
-  });
+  // const [isHome, setIsHome] = useState(false);
+  // const { scrollY } = useScroll();
+  // useMotionValueEvent(scrollY, "change", (latest) => {
+  //   const previous = scrollY.getPrevious();
+  //   if (latest > previous) {
+  //     setHidden(true);
+  //   } else {
+  //     setHidden(false);
+  //   }
+  // });
 
   function handleResize() {
     if (window.innerWidth < 800) {
@@ -51,13 +51,13 @@ function Navigation() {
   }, [isGreater]);
   return (
     <>
-      <motion.header
-        variants={{
-          visible: { y: 0 },
-          hidden: { y: "-100%" },
-        }}
-        animate={hidden ? "hidden" : "visible"}
-        transition={{ duration: 0.4, ease: "easeInOut" }}
+      <header
+        // variants={{
+        //   visible: { y: 0 },
+        //   hidden: { y: "-100%" },
+        // }}
+        // animate={hidden ? "hidden" : "visible"}
+        // transition={{ duration: 0.4, ease: "easeInOut" }}
         className={styles.header}
       >
         <nav className={styles.navigation}>
@@ -96,7 +96,7 @@ function Navigation() {
             </div>
           )}
         </nav>
-      </motion.header>
+      </header>
     </>
   );
 }

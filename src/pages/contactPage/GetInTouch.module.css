@@ -1,0 +1,108 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  justify-content: space-between;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border: 2px solid var(--main-color);
+  border-left: 0;
+  min-width: 25rem;
+  gap: 1.2rem;
+  background-color: #d7ae63;
+}
+
+.formContainer {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  /* gap: 1.2rem; */
+}
+.buttonContainer {
+  width: 90%;
+  display: flex;
+  justify-content: end;
+}
+.button {
+  font-family: Firago-Regular;
+  font-weight: bold;
+  color: white;
+  background-color: var(--main-color);
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.inputLabel {
+  color: var(--white-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  min-width: 11rem;
+}
+.input {
+  width: 12rem;
+  padding-left: 0.4rem;
+  outline-style: groove;
+  outline-color: var(--secondary-color);
+  outline-width: 1px;
+  border: none;
+  border-radius: 0.3rem;
+  height: 1.5rem;
+}
+.errorMsg {
+  color: red;
+  font-size: 0.8rem;
+  border: 1px solid blueviolet;
+  position: absolute;
+}
+
+.errorMsgContainer {
+  position: relative;
+}
+.inputWithLabel {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  margin: 1.2rem;
+}
+.textAreaWithLabel {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  margin: 1.2rem 0 1.2rem 1.2rem;
+}
+.textArea {
+  align-self: flex-start;
+  height: 9rem;
+  width: 20rem;
+  min-width: 11rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .form {
+    width: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2rem;
+    gap: 6rem;
+    min-width: 20rem;
+  }
+  .formContainer {
+    margin: auto;
+  }
+
+  .buttonContainer {
+    max-width: 32rem;
+  }
+  .inputLabel {
+    font-size: 0.9rem;
+    min-width: 8.5rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .inputLabel {
+    font-size: smaller;
+    min-width: 6rem;
+  }
+}

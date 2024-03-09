@@ -6,7 +6,7 @@ import { ImMobile } from "react-icons/im";
 import { BsWatch } from "react-icons/bs";
 import { ImLocation } from "react-icons/im";
 import { IoMailOpen } from "react-icons/io5";
-import NewsLetter from "../../layouts/footer/NewsLetter";
+import GetInTouch from "./GetInTouch";
 const PHONE_NUMBER = "+995 597 91 10 60";
 const contactData = [
   { icon: <ImMobile />, heading: "დაგვიკავშირდით", text: PHONE_NUMBER },
@@ -16,7 +16,7 @@ const contactData = [
   {
     icon: <IoLogoFacebook />,
     heading: "ფბ გვერდი",
-    text: "https://www.facebook.com/varjiwood",
+    text: "www.facebook.com/varjiwood",
   },
 ];
 
@@ -36,7 +36,7 @@ function ContactPage() {
             </div>
           ))}
         </div>
-        <NewsLetter />
+        <GetInTouch />
       </div>
       <div>
         <Map />
