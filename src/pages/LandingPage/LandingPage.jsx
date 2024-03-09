@@ -1,4 +1,4 @@
-import coverImg from "../../assets/cover.webp";
+import coverImg from "../../../public/cover.webp";
 import Carousel from "../../layouts/carousel/Carousel";
 import About from "./About";
 import styles from "./LandingPage.module.css";

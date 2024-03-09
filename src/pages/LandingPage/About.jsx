@@ -1,6 +1,6 @@
 // import { Link } from "react-router-dom";
 import styles from "./About.module.css";
-import aboutUs from "../../assets/about-us.webp";
+import aboutUs from "../../../public/about-us.webp";
 import { NavLink } from "react-router-dom";
 
 function About({ needsButton }) {

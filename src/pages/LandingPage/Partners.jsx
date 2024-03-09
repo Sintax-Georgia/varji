@@ -1,7 +1,7 @@
-import israel from "../../assets/israel.webp";
-import germany from "../../assets/germany.webp";
-import serbia from "../../assets/serbia.webp";
-import austria from "../../assets/austria.webp";
+import israel from "../../../public/countries/israel.webp";
+import germany from "../../../public/countries/germany.webp";
+import serbia from "../../../public/countries/serbia.webp";
+import austria from "../../../public/countries/austria.webp";
 import styles from "./LandingPage.module.css";
 import CustomHeading from "../../helpers/CustomHeading";
 

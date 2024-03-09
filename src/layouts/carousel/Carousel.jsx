@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
-import wifeli from "../../assets/wifeli.webp";
-import briketi from "../../assets/briketi.webp";
-import paneli from "../../assets/avejis-paneli.webp";
-import paneli2 from "../../assets/avejis-paneli-2.webp";
-import kibe from "../../assets/kibe.webp";
-import parketi from "../../assets/masiuri-parketi.webp";
-import parketi2 from "../../assets/parketi2.webp";
-import magida from "../../assets/magidis-zedapiri.webp";
+import wifeli from "../../../public/products-ge/wifeli.webp";
+import briketi from "../../../public/products-ge/briketi.webp";
+import paneli from "../../../public/products-ge/avejis-paneli.webp";
+// import paneli2 from "../../../public/products-ge/avejis-paneli-2.webp";
+import kibe from "../../../public/products-ge/kibe.webp";
+import parketi from "../../../public/products-ge/parketi.webp";
+import parketi2 from "../../../public/products-ge/parketi2.webp";
+import magida from "../../../public/products-ge/magidis-zedapiri.webp";
 // import { imgs } from "./Images";
 import Image from "./Image";
 
@@ -30,7 +30,7 @@ const imgs = [
   { src: parketi, id: 4, name: "მასიური პარკეტი" },
   { src: parketi2, id: 5, name: "ორშრიანი პარკეტი" },
   { src: briketi, id: 6, name: "საწვავი ბრიკეტი" },
-  { src: paneli2, id: 7, name: "საავეჯე პანელი" },
+  // { src: paneli2, id: 7, name: "საავეჯე პანელი" },
   { src: magida, id: 8, name: "მაგიდის ზედაპირი" },
 ];
 

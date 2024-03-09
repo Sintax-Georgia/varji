@@ -1,15 +1,15 @@
 import { useParams } from "react-router-dom";
 //images
-import cover from "../../assets/product-cover.webp";
-import wifeli from "../../assets/wifeli.webp";
-import paneli from "../../assets/avejis-paneli.webp";
-import paneli2 from "../../assets/avejis-paneli-2.webp";
-import kibe from "../../assets/kibe.webp";
-import parketi from "../../assets/masiuri-parketi.webp";
-import parketi2 from "../../assets/parketi2.webp";
-import pinikey from "../../assets/pinikey.webp";
-import pellets from "../../assets/pellets.webp";
-import magida from "../../assets/magidis-zedapiri.webp";
+import cover from "../../../public/product-cover.webp";
+import wifeli from "../../../public/products-ge/wifeli.webp";
+// import paneli2 from "../../../products-ge/avejis-paneli-2.webp";
+import kibe from "../../../public/products-ge/kibe.webp";
+import parketi from "../../../public/products-ge/parketi.webp";
+import parketi2 from "../../../public/products-ge/parketi2.webp";
+import pinikey from "../../../public/products-ge/pinikey.webp";
+import pellets from "../../../public/products-ge/pellets.webp";
+import magida from "../../../public/products-ge/magidis-zedapiri.webp";
+import paneli from "../../../public/products-ge/avejis-paneli.webp";
 //styles
 import styles from "./ProductDetails.module.css";
 //components
@@ -44,7 +44,7 @@ const productData = [
       { src: "../woods/pine.webp", id: 5, name: "ფიჭვი" },
       { src: "../woods/chestnut.webp", id: 6, name: "წაბლი" },
     ],
-    text: "მასალა: ქართული კაკალი, მუხა, წაბლი, ფიჭვი, წიფელა",
+    text: "იდეალურად მიესადაგება საკუთარი სახლის, კოტეჯის, აგარაკის ინტერიერის კედლებისა და ჭერის მოსაპირკეთებლად, პანელს გააჩნია უნიკალური სტრუქტურა და სილამაზე.  ხის პანელი ბუნებრივი შემადგენლობიდან გამომდინარე არ საჭიროებს ანტისეპტიკური ხსნარით დამუშავებას, მას არ ეკარება ხის მღრღნელები და მავნე მწერები.",
   },
   {
     heading: "საწვავი მასალა",
@@ -60,20 +60,20 @@ const productData = [
     ],
     text: "ვარჯი აწარმოებს სამი სახის საწვავ მასალას: ",
   },
-  {
-    heading: "საავეჯე პანელი",
-    imgUrl: [paneli2],
-    id: 7,
-    textures: [
-      { src: "../woods/beech.webp", id: 1, name: "წიფელი" },
-      { src: "../woods/oak.webp", id: 2, name: "მუხა" },
-      { src: "../woods/walnut.webp", id: 3, name: "კაკალი" },
-      // { src:"../woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
-      { src: "../woods/pine.webp", id: 5, name: "ფიჭვი" },
-      { src: "../woods/chestnut.webp", id: 6, name: "წაბლი" },
-    ],
-    text: "მასალა: ქართული კაკალი, მუხა, წაბლი, ფიჭვი, წიფელა",
-  },
+  // {
+  //   heading: "საავეჯე პანელი",
+  //   imgUrl: [paneli2],
+  //   id: 7,
+  //   textures: [
+  //     { src: "../woods/beech.webp", id: 1, name: "წიფელი" },
+  //     { src: "../woods/oak.webp", id: 2, name: "მუხა" },
+  //     { src: "../woods/walnut.webp", id: 3, name: "კაკალი" },
+  //     // { src:"../woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
+  //     { src: "../woods/pine.webp", id: 5, name: "ფიჭვი" },
+  //     { src: "../woods/chestnut.webp", id: 6, name: "წაბლი" },
+  //   ],
+  //   text: "მასალა: ქართული კაკალი, მუხა, წაბლი, ფიჭვი, წიფელა",
+  // },
   {
     heading: "ხის კიბე",
     imgUrl: [kibe],
@@ -100,7 +100,7 @@ const productData = [
       // { src: "../pine.webp", id: 5, name: "ფიჭვი" },
       { src: "../woods/chestnut.webp", id: 6, name: "წაბლი" },
     ],
-    text: "მასალა: ქართული კაკალი, მუხა, წაბლი, წიფელა, ევკალიპტი",
+    text: "მასიური პარკეტი იდეალურად მიესადაგება საკუთარი სახლის, კოტეჯის, აგარაკის იატაკის მოსაწყობად, პარკეტს გააჩნია უნიკალური სტრუქტურა და სილამაზე.  ლარიქსის მასიური პარკეტის ბუნებრივი შემადგენლობიდან გამომდინარე არ საჭიროებს ანტისეპტიკური ხსნარით დამუშავებას, მას არ ეკარება ხის მღრღნელები და მავნე მწერები.მასიური პარკეტი დამუშავებულია ყველა ნორმის დაცვით, გამომშრალია  თანამედროვე დანადგარებში. პროდუქციის ტენიანობა არ აღემატება 12%. ",
   },
   {
     heading: " ორშრიანი პარკეტი",

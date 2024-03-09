@@ -17,14 +17,16 @@ function Image({ src, alt, id, name }) {
         key={id}
         alt={alt}
       />
-      <div className={styles.imageName}>
+      {/* <div
+      //  className={styles.imageName}
+      >
         {name.split(" ").map((word) => (
           <React.Fragment key={word}>
             {word}
             <br />
           </React.Fragment>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

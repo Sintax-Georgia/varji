@@ -1,11 +1,11 @@
 .imagContainer {
-  position: relative;
+  /* position: relative; */
   display: flex;
   justify-content: end;
   height: var(--height);
 }
 
-.imageName {
+/* .imageName {
   font-family: Firago-medium;
   position: absolute;
   display: flex;
@@ -21,4 +21,4 @@
   font-weight: 700;
   word-spacing: -0.6%;
   text-align: end;
-}
+} */
