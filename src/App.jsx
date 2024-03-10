@@ -11,7 +11,6 @@ import AboutPage from "./pages/aboutPage/AboutPage";
 import Products from "./pages/productsPage/Products";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import ProductDetails from "./pages/Product/ProductDetails";
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>

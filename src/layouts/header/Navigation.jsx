@@ -1,46 +1,33 @@
-import styles from "./Navigation.module.css";
+import { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
+//components
+import Menu from "./Menu";
 import CustomeLinks from "../../helpers/CustomeLinks";
 import Logo from "../../helpers/Logo";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { useState, useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
+//styles
+import styles from "./Navigation.module.css";
 //icons
-// import { ImFacebook2 } from "react-icons/im";
 import { IoLogoFacebook } from "react-icons/io5";
-
 import { IoMenu } from "react-icons/io5";
+import { MdLanguage } from "react-icons/md";
 
-function Navigation() {
-  // const [hidden, setHidden] = useState(false);
-  const [isGreater, setIsGreater] = useState(false);
-  // const [isHome, setIsHome] = useState(false);
-  // const { scrollY } = useScroll();
-  // useMotionValueEvent(scrollY, "change", (latest) => {
-  //   const previous = scrollY.getPrevious();
-  //   if (latest > previous) {
-  //     setHidden(true);
-  //   } else {
-  //     setHidden(false);
-  //   }
-  // });
+// import { GrLanguage } from "react-icons/gr";
 
+//i18next
+import { useTranslation } from "react-i18next";
+
+function Navigation({ setShowMenu, showMenu }) {
+  const { t, i18n } = useTranslation();
+  const [isGreater, setIsGreater] = useState(window.innerWidth < 900);
+  const [language, setLanguage] = useState("ge");
   function handleResize() {
-    if (window.innerWidth < 800) {
+    console.log(innerWidth);
+    if (window.innerWidth < 900) {
       setIsGreater(true);
     } else {
       setIsGreater(false);
     }
   }
-
-  // function smoothScroll(target) {
-  //   const element = document.querySelector(target);
-  //   if (element) {
-  //     window.scrollTo({
-  //       top: element.offsetTop,
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // }
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
@@ -48,18 +35,10 @@ function Navigation() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [isGreater]);
+  }, [window.innerWidth]);
   return (
     <>
-      <header
-        // variants={{
-        //   visible: { y: 0 },
-        //   hidden: { y: "-100%" },
-        // }}
-        // animate={hidden ? "hidden" : "visible"}
-        // transition={{ duration: 0.4, ease: "easeInOut" }}
-        className={styles.header}
-      >
+      <header className={styles.header}>
         <nav className={styles.navigation}>
           <div>
             <NavLink to="/">
@@ -71,28 +50,66 @@ function Navigation() {
               <div>
                 <ul className={styles.navLinks}>
                   <li>
-                    <CustomeLinks to="/">HOME</CustomeLinks>
+                    <CustomeLinks to="/">{t("home")}</CustomeLinks>
                   </li>
                   <li>
-                    <CustomeLinks to="/about">ABOUT US</CustomeLinks>
+                    <CustomeLinks to="/about">{t("about")}</CustomeLinks>
                   </li>
 
                   <li>
-                    <CustomeLinks to="/products">PRODUCTS</CustomeLinks>
+                    <CustomeLinks to="/products">{t("products")}</CustomeLinks>
                   </li>
                   <li>
-                    <CustomeLinks to="/contact">CONTACT</CustomeLinks>
+                    <CustomeLinks to="/contact">{t("contact")}</CustomeLinks>
                   </li>
                 </ul>
               </div>
-              <div className={styles.fbContainer}>
-                <IoLogoFacebook className={styles.fbIcon} />
+              <div className={styles.iconsContainer}>
+                <MdLanguage
+                  className={styles.internalizationIcon}
+                  onClick={() => {
+                    language === "en"
+                      ? i18n.changeLanguage("ge")
+                      : i18n.changeLanguage("en");
+                    setLanguage((prevlanguage) =>
+                      prevlanguage === "en" ? "ge" : "en"
+                    );
+                  }}
+                />
+                <Link to="https://www.facebook.com/varjiwood" target="_blank">
+                  <IoLogoFacebook className={styles.fbIcon} />
+                </Link>
               </div>
             </>
           ) : (
             <div className={styles.iconsContainer}>
-              <IoLogoFacebook className={styles.fbIcon} />
-              <IoMenu className={styles.menuIcon} />
+              <MdLanguage
+                className={styles.internalizationIcon}
+                onClick={() =>
+                  setLanguage((prevlanguage) =>
+                    prevlanguage === "en" ? "ge" : "en"
+                  )
+                }
+              />
+              <Link
+                className={styles.fbLink}
+                to="https://www.facebook.com/varjiwood"
+                target="_blank"
+              >
+                <IoLogoFacebook className={styles.fbIcon} />
+              </Link>
+              <IoMenu
+                onClick={() => {
+                  setShowMenu((prev) => !prev);
+                  console.log(showMenu);
+                  if (showMenu) {
+                    document.body.style.overflow = "auto";
+                  } else {
+                    document.body.style.overflow = "hidden";
+                  }
+                }}
+                className={styles.menuIcon}
+              />
             </div>
           )}
         </nav>

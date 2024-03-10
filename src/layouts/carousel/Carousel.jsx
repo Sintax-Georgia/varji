@@ -35,10 +35,10 @@ const imgs = [
 ];
 
 export default function Carousel() {
-  const [isTablet, setIsTablet] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(window.innerWidth < 900);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 500);
   function handleResize() {
-    if (window.innerWidth < 800) {
+    if (window.innerWidth < 900) {
       setIsTablet(true);
     } else {
       setIsTablet(false);

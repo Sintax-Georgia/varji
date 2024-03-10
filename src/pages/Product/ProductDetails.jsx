@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import cover from "../../../public/product-cover.webp";
 import wifeli from "../../../public/products-ge/wifeli.webp";
 // import paneli2 from "../../../products-ge/avejis-paneli-2.webp";
+import ruf from "../../../public/products-ge/ruf.webp";
 import kibe from "../../../public/products-ge/kibe.webp";
 import parketi from "../../../public/products-ge/parketi.webp";
 import parketi2 from "../../../public/products-ge/parketi2.webp";
@@ -48,7 +49,7 @@ const productData = [
   },
   {
     heading: "საწვავი მასალა",
-    imgUrl: [pellets, pinikey],
+    imgUrl: [pellets, pinikey, ruf],
     id: 6,
     textures: [
       { src: "../woods/beech.webp", id: 1, name: "წიფელი" },

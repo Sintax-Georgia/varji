@@ -48,13 +48,11 @@
 .iconsContainer {
   display: flex;
   width: 9rem;
-  justify-content: end;
-  align-items: center;
-  gap: 2rem;
+  justify-content: space-around;
+  /* align-items: end; */
 }
 svg {
   color: white;
-
   cursor: pointer;
 }
 .fbIcon {
@@ -65,7 +63,18 @@ svg {
 .fbIcon:hover {
   scale: 1.1;
 }
-
+.internalizationIcon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.fbLink {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.internalizationIcon:hover {
+  scale: 1.1;
+}
 .menuIcon {
   width: 2rem;
   height: 2rem;
@@ -75,11 +84,37 @@ svg {
   animation: menu 1s ease;
 }
 
-.fbContainer {
-  display: flex;
-  justify-content: end;
-  /* width: 9rem; */
+.menuContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100vh;
+  z-index: 14;
+  background-color: #477067;
 }
+.menuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3rem;
+  background-color: #1f312e;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  color: white;
+  padding: 0 1rem;
+}
+.menuHeader svg {
+  width: 2rem;
+  height: 2rem;
+}
+.menuLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
 .homeLinks {
   position: absolute;
   left: 0;

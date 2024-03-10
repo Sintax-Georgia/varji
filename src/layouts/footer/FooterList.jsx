@@ -1,5 +1,5 @@
 /* eslint-disable no-unreachable */
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { footerData } from "../../data";
 import styles from "./Footer.module.css";
 function FooterList() {
@@ -29,6 +29,34 @@ function FooterList() {
                   <NavLink
                     key={item}
                     to="/about"
+                    className={({ isActive }) =>
+                      isActive ? styles.active : ""
+                    }
+                  >
+                    <li className={styles.listItem} key={item}>
+                      {item}
+                    </li>
+                  </NavLink>
+                );
+              } else if (item === "Home") {
+                return (
+                  <NavLink
+                    key={item}
+                    to="/"
+                    className={({ isActive }) =>
+                      isActive ? styles.active : ""
+                    }
+                  >
+                    <li className={styles.listItem} key={item}>
+                      {item}
+                    </li>
+                  </NavLink>
+                );
+              } else if (item === "Contact") {
+                return (
+                  <NavLink
+                    key={item}
+                    to="/contact"
                     className={({ isActive }) =>
                       isActive ? styles.active : ""
                     }

@@ -2,7 +2,7 @@ export const footerData = [
   {
     id: 1,
     heading: "Navigation",
-    list: ["About us", "Products"],
+    list: ["Home", "About us", "Products", "Contact"],
   },
   {
     id: 2,
