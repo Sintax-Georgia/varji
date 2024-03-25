@@ -67,23 +67,6 @@ function GetInTouch() {
             placeholder="Text message"
             className={`${styles.textArea} ${styles.input}`}
           />
-          {/* <input
-            name="phone"
-            {...register("phone", {
-              pattern: {
-                value: /^5\d{2}\d{6}$/,
-                message: "Incorrect phone number",
-              },
-            })}
-            className={styles.input}
-            type="text"
-            autoComplete="tel"
-            id="phone"
-            placeholder="Phone"
-          />
-          {errors.phone && (
-            <p className={styles.errorMsg}>{errors.phone.message}</p>
-          )} */}
         </div>
       </div>
 

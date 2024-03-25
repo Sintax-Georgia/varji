@@ -1,22 +1,21 @@
 import { useParams } from "react-router-dom";
 //images
-import cover from "../../../public/product-cover.webp";
-import wifeli from "../../../public/products-ge/wifeli.webp";
+import cover from "/product-cover.webp";
+import wifeli from "/products-ge/wifeli.webp";
 // import paneli2 from "../../../products-ge/avejis-paneli-2.webp";
-import ruf from "../../../public/products-ge/ruf.webp";
-import kibe from "../../../public/products-ge/kibe.webp";
-import parketi from "../../../public/products-ge/parketi.webp";
-import parketi2 from "../../../public/products-ge/parketi2.webp";
-import pinikey from "../../../public/products-ge/pinikey.webp";
-import pellets from "../../../public/products-ge/pellets.webp";
-import magida from "../../../public/products-ge/magidis-zedapiri.webp";
-import paneli from "../../../public/products-ge/avejis-paneli.webp";
+import ruf from "/products-ge/ruf.webp";
+import kibe from "/products-ge/kibe.webp";
+import parketi from "/products-ge/parketi.webp";
+import parketi2 from "/products-ge/parketi2.webp";
+import pinikey from "/products-ge/pinikey.webp";
+import pellets from "/products-ge/pellets.webp";
+import magida from "/products-ge/magidis-zedapiri.webp";
+import paneli from "/products-ge/avejis-paneli.webp";
 //styles
 import styles from "./ProductDetails.module.css";
 //components
 import CustomHeading from "../../helpers/CustomHeading";
 import WoodWeWorkWith from "../productsPage/WoodWeWorkWith";
-// import ruf from "../../assets/ruf.webp";
 
 const productData = [
   {
@@ -24,12 +23,12 @@ const productData = [
     imgUrl: [wifeli],
     id: 1,
     textures: [
-      { src: "../woods/beech.webp", id: 1, name: "წიფელი" },
+      { src: "/woods/beech.webp", id: 1, name: "წიფელი" },
       // { src: "../woods/oak.webp", id: 2, name: "მუხა" },
       // { src: "../woods/walnut.webp", id: 3, name: "კაკალი" },
       // { src:"../woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
-      { src: "../woods/pine.webp", id: 5, name: "ფიჭვი" },
-      { src: "../woods/chestnut.webp", id: 6, name: "წაბლი" },
+      { src: "/woods/pine.webp", id: 5, name: "ფიჭვი" },
+      { src: "/woods/chestnut.webp", id: 6, name: "წაბლი" },
     ],
     text: "ვარჯი აწარმოებს ქართული წიფელის, წაბლისა და ფიჭვის ფიცარს.",
   },
@@ -38,12 +37,12 @@ const productData = [
     imgUrl: [paneli],
     id: 2,
     textures: [
-      { src: "../woods/beech.webp", id: 1, name: "წიფელი" },
-      { src: "../woods/oak.webp", id: 2, name: "მუხა" },
-      { src: "../woods/walnut.webp", id: 3, name: "კაკალი" },
+      { src: "/woods/beech.webp", id: 1, name: "წიფელი" },
+      { src: "/woods/oak.webp", id: 2, name: "მუხა" },
+      { src: "/woods/walnut.webp", id: 3, name: "კაკალი" },
       // { src:"./eucaliptus.webp", id: 4, name: "ევკალიპტი" },
-      { src: "../woods/pine.webp", id: 5, name: "ფიჭვი" },
-      { src: "../woods/chestnut.webp", id: 6, name: "წაბლი" },
+      { src: "/woods/pine.webp", id: 5, name: "ფიჭვი" },
+      { src: "/woods/chestnut.webp", id: 6, name: "წაბლი" },
     ],
     text: "იდეალურად მიესადაგება საკუთარი სახლის, კოტეჯის, აგარაკის ინტერიერის კედლებისა და ჭერის მოსაპირკეთებლად, პანელს გააჩნია უნიკალური სტრუქტურა და სილამაზე.  ხის პანელი ბუნებრივი შემადგენლობიდან გამომდინარე არ საჭიროებს ანტისეპტიკური ხსნარით დამუშავებას, მას არ ეკარება ხის მღრღნელები და მავნე მწერები.",
   },
@@ -52,12 +51,12 @@ const productData = [
     imgUrl: [pellets, pinikey, ruf],
     id: 6,
     textures: [
-      { src: "../woods/beech.webp", id: 1, name: "წიფელი" },
-      { src: "../woods/oak.webp", id: 2, name: "მუხა" },
-      { src: "../woods/walnut.webp", id: 3, name: "კაკალი" },
-      { src: "../woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
-      { src: "../woods/pine.webp", id: 5, name: "ფიჭვი" },
-      { src: "../woods/chestnut.webp", id: 6, name: "წაბლი" },
+      { src: "/woods/beech.webp", id: 1, name: "წიფელი" },
+      { src: "/woods/oak.webp", id: 2, name: "მუხა" },
+      { src: "/woods/walnut.webp", id: 3, name: "კაკალი" },
+      { src: "/woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
+      { src: "/woods/pine.webp", id: 5, name: "ფიჭვი" },
+      { src: "/woods/chestnut.webp", id: 6, name: "წაბლი" },
     ],
     text: "ვარჯი აწარმოებს სამი სახის საწვავ მასალას: ",
   },
@@ -66,12 +65,12 @@ const productData = [
   //   imgUrl: [paneli2],
   //   id: 7,
   //   textures: [
-  //     { src: "../woods/beech.webp", id: 1, name: "წიფელი" },
-  //     { src: "../woods/oak.webp", id: 2, name: "მუხა" },
-  //     { src: "../woods/walnut.webp", id: 3, name: "კაკალი" },
-  //     // { src:"../woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
-  //     { src: "../woods/pine.webp", id: 5, name: "ფიჭვი" },
-  //     { src: "../woods/chestnut.webp", id: 6, name: "წაბლი" },
+  //     { src: "/woods/beech.webp", id: 1, name: "წიფელი" },
+  //     { src: "/woods/oak.webp", id: 2, name: "მუხა" },
+  //     { src: "/woods/walnut.webp", id: 3, name: "კაკალი" },
+  //     // { src:"/woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
+  //     { src: "/woods/pine.webp", id: 5, name: "ფიჭვი" },
+  //     { src: "/woods/chestnut.webp", id: 6, name: "წაბლი" },
   //   ],
   //   text: "მასალა: ქართული კაკალი, მუხა, წაბლი, ფიჭვი, წიფელა",
   // },
@@ -80,12 +79,12 @@ const productData = [
     imgUrl: [kibe],
     id: 3,
     textures: [
-      { src: "../woods/beech.webp", id: 1, name: "წიფელი" },
-      { src: "../woods/oak.webp", id: 2, name: "მუხა" },
-      { src: "../woods/walnut.webp", id: 3, name: "კაკალი" },
-      { src: "../woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
-      { src: "../woods/pine.webp", id: 5, name: "ფიჭვი" },
-      { src: "../woods/chestnut.webp", id: 6, name: "წაბლი" },
+      { src: "/woods/beech.webp", id: 1, name: "წიფელი" },
+      { src: "/woods/oak.webp", id: 2, name: "მუხა" },
+      { src: "/woods/walnut.webp", id: 3, name: "კაკალი" },
+      { src: "/woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
+      { src: "/woods/pine.webp", id: 5, name: "ფიჭვი" },
+      { src: "/woods/chestnut.webp", id: 6, name: "წაბლი" },
     ],
     text: "ვარჯი აწარმოებს უმაღლესი ხარისხის და ნებისმიერი დიზაინის ხის საფეხურებს.",
   },
@@ -94,12 +93,12 @@ const productData = [
     imgUrl: [parketi],
     id: 4,
     textures: [
-      { src: "../woods/beech.webp", id: 1, name: "წიფელი" },
-      { src: "../woods/oak.webp", id: 2, name: "მუხა" },
-      { src: "../woods/walnut.webp", id: 3, name: "კაკალი" },
-      { src: "../woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
-      // { src: "../pine.webp", id: 5, name: "ფიჭვი" },
-      { src: "../woods/chestnut.webp", id: 6, name: "წაბლი" },
+      { src: "/woods/beech.webp", id: 1, name: "წიფელი" },
+      { src: "/woods/oak.webp", id: 2, name: "მუხა" },
+      { src: "/woods/walnut.webp", id: 3, name: "კაკალი" },
+      { src: "/woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
+      // { src: "/pine.webp", id: 5, name: "ფიჭვი" },
+      { src: "/woods/chestnut.webp", id: 6, name: "წაბლი" },
     ],
     text: "მასიური პარკეტი იდეალურად მიესადაგება საკუთარი სახლის, კოტეჯის, აგარაკის იატაკის მოსაწყობად, პარკეტს გააჩნია უნიკალური სტრუქტურა და სილამაზე.  ლარიქსის მასიური პარკეტის ბუნებრივი შემადგენლობიდან გამომდინარე არ საჭიროებს ანტისეპტიკური ხსნარით დამუშავებას, მას არ ეკარება ხის მღრღნელები და მავნე მწერები.მასიური პარკეტი დამუშავებულია ყველა ნორმის დაცვით, გამომშრალია  თანამედროვე დანადგარებში. პროდუქციის ტენიანობა არ აღემატება 12%. ",
   },
@@ -108,12 +107,12 @@ const productData = [
     imgUrl: [parketi2],
     id: 5,
     textures: [
-      { src: "../woods/beech.webp", id: 1, name: "წიფელი" },
-      { src: "../woods/oak.webp", id: 2, name: "მუხა" },
-      { src: "../woods/walnut.webp", id: 3, name: "კაკალი" },
-      { src: "../woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
-      // { src: "../woods/pine.webp", id: 5, name: "ფიჭვი" },
-      { src: "../woods/chestnut.webp", id: 6, name: "წაბლი" },
+      { src: "/woods/beech.webp", id: 1, name: "წიფელი" },
+      { src: "/woods/oak.webp", id: 2, name: "მუხა" },
+      { src: "/woods/walnut.webp", id: 3, name: "კაკალი" },
+      { src: "/woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
+      // { src: "/woods/pine.webp", id: 5, name: "ფიჭვი" },
+      { src: "/woods/chestnut.webp", id: 6, name: "წაბლი" },
     ],
     text: "მასალა: ქართული კაკალი, მუხა, წაბლი, წიფელა, ევკალიპტი",
   },
@@ -122,12 +121,12 @@ const productData = [
     imgUrl: [magida],
     id: 8,
     textures: [
-      { src: "../woods/beech.webp", id: 1, name: "წიფელი" },
-      { src: "../woods/oak.webp", id: 2, name: "მუხა" },
-      { src: "../woods/walnut.webp", id: 3, name: "კაკალი" },
-      { src: "../woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
-      { src: "../woods/pine.webp", id: 5, name: "ფიჭვი" },
-      { src: "../woods/chestnut.webp", id: 6, name: "წაბლი" },
+      { src: "/woods/beech.webp", id: 1, name: "წიფელი" },
+      { src: "/woods/oak.webp", id: 2, name: "მუხა" },
+      { src: "/woods/walnut.webp", id: 3, name: "კაკალი" },
+      { src: "/woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
+      { src: "/woods/pine.webp", id: 5, name: "ფიჭვი" },
+      { src: "/woods/chestnut.webp", id: 6, name: "წაბლი" },
     ],
     text: "ვარჯი აწარმოებს ნებისმიერი დიზაინის მაგიდის ზედაპირებს, ხის ბარსადგომებსა და სხვა გამორჩეული დიზაინის საავეჯო მასალას.",
   },

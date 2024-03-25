@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
-import wifeli from "../../../public/products-ge/wifeli.webp";
-import briketi from "../../../public/products-ge/briketi.webp";
-import paneli from "../../../public/products-ge/avejis-paneli.webp";
-// import paneli2 from "../../../public/products-ge/avejis-paneli-2.webp";
-import kibe from "../../../public/products-ge/kibe.webp";
-import parketi from "../../../public/products-ge/parketi.webp";
-import parketi2 from "../../../public/products-ge/parketi2.webp";
-import magida from "../../../public/products-ge/magidis-zedapiri.webp";
+import wifeli from "/products-ge/wifeli.webp";
+import briketi from "/products-ge/briketi.webp";
+import paneli from "/products-ge/avejis-paneli.webp";
+// import paneli2 from "/products-ge/avejis-paneli-2.webp";
+import kibe from "/products-ge/kibe.webp";
+import parketi from "/products-ge/parketi.webp";
+import parketi2 from "/products-ge/parketi2.webp";
+import magida from "/products-ge/magidis-zedapiri.webp";
 // import { imgs } from "./Images";
 import Image from "./Image";
 

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 //components
-import Menu from "./Menu";
 import CustomeLinks from "../../helpers/CustomeLinks";
 import Logo from "../../helpers/Logo";
 //styles
@@ -21,7 +20,6 @@ function Navigation({ setShowMenu, showMenu }) {
   const [isGreater, setIsGreater] = useState(window.innerWidth < 900);
   const [language, setLanguage] = useState("ge");
   function handleResize() {
-    console.log(innerWidth);
     if (window.innerWidth < 900) {
       setIsGreater(true);
     } else {

@@ -1,6 +1,5 @@
-// import { Link } from "react-router-dom";
 import styles from "./About.module.css";
-import aboutUs from "../../../public/about-us.webp";
+import aboutUs from "/about-us.webp";
 import { NavLink } from "react-router-dom";
 
 function About({ needsButton }) {
@@ -21,9 +20,6 @@ function About({ needsButton }) {
             <button className={styles.seeMoreBtn}>მეტის ნახვა</button>
           </NavLink>
         )}
-        {/* <Link to="/about">
-          <button className={styles.button}>See more</button>
-        </Link> */}
       </div>
       <div className={styles.imgContainer}>
         <img className={styles.aboutUsImg} src={aboutUs} />
