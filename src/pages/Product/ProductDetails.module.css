@@ -3,9 +3,12 @@
   margin: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .productImage {
+  min-width: 20rem;
   width: 25%;
+  height: auto;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-top-left-radius: 2rem;
@@ -26,10 +29,43 @@
   border-radius: 2rem;
   width: 100%;
 }
-
+.productText {
+  font-size: 1.1rem;
+  min-width: 20rem;
+}
 .productImgContainer {
   display: flex;
   width: 100%;
   justify-content: center;
   gap: 2rem;
+  /* flex-wrap: wrap; */
+  /* margin-bottom: 2rem; */
+}
+
+.fuelBriquette {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+.imagesContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .productImgContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .productText {
+    text-align: center;
+  }
+  .imagesContainer {
+    flex-direction: column;
+    align-items: center;
+  }
 }

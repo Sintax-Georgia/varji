@@ -4,8 +4,17 @@ import styles from "./Navigation.module.css";
 import { IoMdClose } from "react-icons/io";
 //framer
 import { motion } from "framer-motion";
+//languages
+import { useTranslation } from "react-i18next";
 
 function Menu({ setShowMenu, showMenu }) {
+  const { t } = useTranslation("navigation");
+  const menuLinks = [
+    { to: "/", lang: "home", id: 1 },
+    { to: "/about", lang: "about", id: 2 },
+    { to: "/products", lang: "products", id: 3 },
+    { to: "/contact", lang: "contact", id: 4 },
+  ];
   return (
     <motion.div
       className={styles.menuContainer}
@@ -23,10 +32,18 @@ function Menu({ setShowMenu, showMenu }) {
         />
       </div>
       <div className={styles.menuLinks}>
-        <CustomeLinks to="/">HOME</CustomeLinks>
-        <CustomeLinks to="/about">ABOUT US</CustomeLinks>
-        <CustomeLinks to="/products">PRODUCTS</CustomeLinks>
-        <CustomeLinks to="/contact">CONTACT</CustomeLinks>
+        {menuLinks.map((link) => (
+          <CustomeLinks
+            key={link.id}
+            to={link.to}
+            onClick={() => {
+              setShowMenu(false);
+              document.body.style.overflow = "auto";
+            }}
+          >
+            {t(link.lang)}
+          </CustomeLinks>
+        ))}
       </div>
     </motion.div>
   );

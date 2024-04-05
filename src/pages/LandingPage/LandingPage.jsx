@@ -1,9 +1,15 @@
-import coverImg from "/cover.webp";
+//components
 import Carousel from "../../layouts/carousel/Carousel";
 import About from "./About";
-import styles from "./LandingPage.module.css";
-import { motion } from "framer-motion";
 import Partners from "./Partners";
+//images
+import coverImg from "/cover.webp";
+//styles
+import styles from "./LandingPage.module.css";
+//animation
+import { motion } from "framer-motion";
+
+
 function LandingPage() {
   const variants = {
     initial: { clipPath: "inset(0% 50% 0% 50%)" },

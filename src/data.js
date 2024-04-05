@@ -10,7 +10,7 @@ export const footerData = [
     list: [
       "Adress: 27 str Varji,0179",
       "Phone: +00198828",
-      "WhatsUp: +091238012",
+      "E-mail: wood@varji.ge",
     ],
   },
 ];

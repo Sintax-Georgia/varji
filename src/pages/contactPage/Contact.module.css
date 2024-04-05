@@ -63,6 +63,7 @@
   svg {
     fill: var(--main-color);
     cursor: auto;
+    cursor: pointer;
   }
 }
 

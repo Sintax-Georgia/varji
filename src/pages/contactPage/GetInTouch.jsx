@@ -1,7 +1,9 @@
 import styles from "./GetInTouch.module.css";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 
 function GetInTouch() {
+  const { t } = useTranslation("contactForm");
   const {
     register,
     handleSubmit,
@@ -17,7 +19,7 @@ function GetInTouch() {
       <div className={styles.formContainer}>
         <div className={styles.inputWithLabel}>
           <label htmlFor="name" className={styles.inputLabel}>
-            სახელი
+            {t("name")}
           </label>
           <input
             name="name"
@@ -37,7 +39,7 @@ function GetInTouch() {
         </div>
         <div className={styles.inputWithLabel}>
           <label htmlFor="email" className={styles.inputLabel}>
-            ელ-ფოსტა
+            {t("email")}
           </label>
           <input
             name="email"
@@ -51,7 +53,7 @@ function GetInTouch() {
             type="text"
             autoComplete="email"
             id="email"
-            placeholder="E-mail"
+            placeholder="Your E-mail"
           />
           {errors.email && (
             <p className={styles.errorMsg}>{errors.email.message}</p>
@@ -59,7 +61,7 @@ function GetInTouch() {
         </div>
         <div className={styles.textAreaWithLabel}>
           <label htmlFor="text" className={styles.inputLabel}>
-            შეტყობინება
+            {t("message")}
           </label>
           <textarea
             type="text"
@@ -71,7 +73,7 @@ function GetInTouch() {
       </div>
 
       <div className={styles.buttonContainer}>
-        <button className={styles.button}>გაგზავნა</button>
+        <button className={styles.button}>{t("button")}</button>
       </div>
     </form>
   );

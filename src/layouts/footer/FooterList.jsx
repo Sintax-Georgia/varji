@@ -2,14 +2,18 @@
 import { NavLink } from "react-router-dom";
 import { footerData } from "../../data";
 import styles from "./Footer.module.css";
+import { useTranslation } from "react-i18next";
 function FooterList() {
+  const { t } = useTranslation("footer");
   return (
     <>
       {footerData.map((data) => (
         <div className={styles.container} key={data.id}>
-          <h3 className={styles.footerHeading}>{data.heading}</h3>
+          <h3 className={styles.footerHeading}>
+            {t(`headings.heading${data.id}`)}
+          </h3>
           <ul className={styles.list}>
-            {data.list.map((item) => {
+            {data.list.map((item, index) => {
               if (item === "Products") {
                 return (
                   <NavLink
@@ -20,7 +24,7 @@ function FooterList() {
                     }
                   >
                     <li className={styles.listItem} key={item}>
-                      {item}
+                      {t(`links.link${index + 1}`)}
                     </li>
                   </NavLink>
                 );
@@ -34,7 +38,7 @@ function FooterList() {
                     }
                   >
                     <li className={styles.listItem} key={item}>
-                      {item}
+                      {t(`links.link${index + 1}`)}
                     </li>
                   </NavLink>
                 );
@@ -48,7 +52,7 @@ function FooterList() {
                     }
                   >
                     <li className={styles.listItem} key={item}>
-                      {item}
+                      {t(`links.link${index + 1}`)}
                     </li>
                   </NavLink>
                 );
@@ -62,7 +66,7 @@ function FooterList() {
                     }
                   >
                     <li className={styles.listItem} key={item}>
-                      {item}
+                      {t(`links.link${index + 1}`)}
                     </li>
                   </NavLink>
                 );
@@ -70,7 +74,7 @@ function FooterList() {
 
               return (
                 <li className={styles.listItem} key={item}>
-                  {item}
+                  {t(`list.item${index + 1}`)}
                 </li>
               );
             })}

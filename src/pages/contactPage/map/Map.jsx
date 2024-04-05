@@ -34,9 +34,7 @@ const Map = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        <Marker position={[42.170171, 44.695986]}>
-          <Popup>აქ ვართ {`${"<3"}`}</Popup>
-        </Marker>
+        <Marker position={[42.170171, 44.695986]}></Marker>
       </MapContainer>
     </div>
   );

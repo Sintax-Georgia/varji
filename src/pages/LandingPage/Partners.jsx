@@ -4,6 +4,8 @@ import serbia from "/countries/serbia.webp";
 import austria from "/countries/austria.webp";
 import styles from "./LandingPage.module.css";
 import CustomHeading from "../../helpers/CustomHeading";
+//language
+import { useTranslation } from "react-i18next";
 
 const partners = [
   { src: israel, id: 1 },
@@ -13,9 +15,10 @@ const partners = [
 ];
 
 function Partners() {
+  const { t } = useTranslation("partners");
   return (
     <>
-      <CustomHeading>Export Countries</CustomHeading>
+      <CustomHeading>{t("heading")}</CustomHeading>
       <div className={styles.partnersContainer}>
         {partners.map((partner) => (
           <img

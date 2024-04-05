@@ -113,6 +113,9 @@ svg {
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+  color: white;
+  font-size: 1.25;
+  font-weight: 600;
 }
 
 .homeLinks {

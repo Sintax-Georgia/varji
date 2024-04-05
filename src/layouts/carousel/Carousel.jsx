@@ -1,15 +1,26 @@
 import { useState, useEffect } from "react";
 
+// import paneli2 from "/products-ge/avejis-paneli-2.webp";
+//GE Photos
 import wifeli from "/products-ge/wifeli.webp";
 import briketi from "/products-ge/briketi.webp";
 import paneli from "/products-ge/avejis-paneli.webp";
-// import paneli2 from "/products-ge/avejis-paneli-2.webp";
 import kibe from "/products-ge/kibe.webp";
 import parketi from "/products-ge/parketi.webp";
 import parketi2 from "/products-ge/parketi2.webp";
 import magida from "/products-ge/magidis-zedapiri.webp";
+//EN Photos
+import wifeliEn from "/products-en/wifeli.webp";
+import briketiEn from "/products-en/briketi.webp";
+import paneliEn from "/products-en/avejis-paneli.webp";
+import kibeEn from "/products-en/kibe.webp";
+import parketiEn from "/products-en/parketi.webp";
+import parketi2En from "/products-en/parketi2.webp";
+import magidaEn from "/products-en/magidis-zedapiri.webp";
 // import { imgs } from "./Images";
 import Image from "./Image";
+//language
+import { useTranslation } from "react-i18next";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -23,20 +34,24 @@ import "./styles.css";
 // import required modules
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
-const imgs = [
-  { src: wifeli, id: 1, name: "წიფელის ფიცარი" },
-  { src: paneli, id: 2, name: "საავეჯე პანელი" },
-  { src: kibe, id: 3, name: "ხის საფეხურები" },
-  { src: parketi, id: 4, name: "მასიური პარკეტი" },
-  { src: parketi2, id: 5, name: "ორშრიანი პარკეტი" },
-  { src: briketi, id: 6, name: "საწვავი ბრიკეტი" },
-  // { src: paneli2, id: 7, name: "საავეჯე პანელი" },
-  { src: magida, id: 8, name: "მაგიდის ზედაპირი" },
-];
-
 export default function Carousel() {
   const [isTablet, setIsTablet] = useState(window.innerWidth < 900);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 500);
+  const { i18n } = useTranslation();
+  const georgian = i18n.language === "ge";
+  const imgs = [
+    {
+      src: georgian ? wifeli : wifeliEn,
+      id: 1,
+      name: "წიფელის ფიცარი",
+    },
+    { src: georgian ? paneli : paneliEn, id: 2, name: "საავეჯე პანელი" },
+    { src: georgian ? kibe : kibeEn, id: 3, name: "ხის საფეხურები" },
+    { src: georgian ? parketi : parketiEn, id: 4, name: "მასიური პარკეტი" },
+    { src: georgian ? parketi2 : parketi2En, id: 5, name: "ორშრიანი პარკეტი" },
+    { src: georgian ? briketi : briketiEn, id: 6, name: "საწვავი ბრიკეტი" },
+    { src: georgian ? magida : magidaEn, id: 7, name: "მაგიდის ზედაპირი" },
+  ];
   function handleResize() {
     if (window.innerWidth < 900) {
       setIsTablet(true);

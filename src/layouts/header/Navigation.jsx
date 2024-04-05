@@ -16,7 +16,7 @@ import { MdLanguage } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
 function Navigation({ setShowMenu, showMenu }) {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation("navigation");
   const [isGreater, setIsGreater] = useState(window.innerWidth < 900);
   const [language, setLanguage] = useState("ge");
   function handleResize() {
@@ -83,11 +83,14 @@ function Navigation({ setShowMenu, showMenu }) {
             <div className={styles.iconsContainer}>
               <MdLanguage
                 className={styles.internalizationIcon}
-                onClick={() =>
+                onClick={() => {
+                  language === "en"
+                    ? i18n.changeLanguage("ge")
+                    : i18n.changeLanguage("en");
                   setLanguage((prevlanguage) =>
                     prevlanguage === "en" ? "ge" : "en"
-                  )
-                }
+                  );
+                }}
               />
               <Link
                 className={styles.fbLink}
@@ -99,7 +102,6 @@ function Navigation({ setShowMenu, showMenu }) {
               <IoMenu
                 onClick={() => {
                   setShowMenu((prev) => !prev);
-                  console.log(showMenu);
                   if (showMenu) {
                     document.body.style.overflow = "auto";
                   } else {

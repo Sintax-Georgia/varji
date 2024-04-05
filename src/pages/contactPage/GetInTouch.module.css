@@ -77,7 +77,16 @@
   height: 9rem;
   width: 20rem;
   min-width: 11rem;
+  padding-top: 0.4rem;
 }
+::placeholder {
+  font-family: Firago-Regular; /* Your desired font family */
+  color: #999; /* Your desired color */
+  /* Additional styles as needed */
+}
+/* .textArea::placeholder {
+  padding-top: 0.4rem;
+} */
 
 @media only screen and (max-width: 800px) {
   .form {

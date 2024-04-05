@@ -1,23 +1,23 @@
-import styles from "./About.module.css";
+//images
 import aboutUs from "/about-us.webp";
+//styles
+import styles from "./About.module.css";
+//Router
 import { NavLink } from "react-router-dom";
+//language
+import { useTranslation } from "react-i18next";
 
 function About({ needsButton }) {
+  const { t } = useTranslation("about");
+
   return (
     <div className={styles.aboutUsContainer} id="about">
       <div className={styles.aboutUs}>
-        <h1 className={styles.aboutUsHeading}>ABOUT US</h1>
-        <p className={styles.aboutUsText}>
-          ავეჯის მწარმოებელი კომპანია ვარჯი 25 წელია წარმატებით მოღვაწეობს
-          საქართველოში. კომპანიის საავეჯე და სამშენებლო ხის მასალები ქართული
-          კაკლის, მუხის, წაბლისა და წიფელას ბაზაზე მზადდება. 1999 წლიდან, ვარჯი
-          აქცენტს მაღალ ხარისხზე აკეთებს, შედეგად პროდუქცია სრულად აკმაყოფილებს
-          ევროპისა და აზიის ბაზრის მოთხოვნებს და კომპანია ექსპორტს სხვადასხვა
-          ქვეყნებში ეწევა.
-        </p>
+        <h1 className={styles.aboutUsHeading}>{t("heading")}</h1>
+        <p className={styles.aboutUsText}>{t("text")}</p>
         {needsButton && (
           <NavLink to={"/about"}>
-            <button className={styles.seeMoreBtn}>მეტის ნახვა</button>
+            <button className={styles.seeMoreBtn}>{t("button")}</button>
           </NavLink>
         )}
       </div>

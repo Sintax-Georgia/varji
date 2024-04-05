@@ -1,8 +1,7 @@
 import { useParams } from "react-router-dom";
-//images
+//images ge
 import cover from "/product-cover.webp";
 import wifeli from "/products-ge/wifeli.webp";
-// import paneli2 from "../../../products-ge/avejis-paneli-2.webp";
 import ruf from "/products-ge/ruf.webp";
 import kibe from "/products-ge/kibe.webp";
 import parketi from "/products-ge/parketi.webp";
@@ -11,22 +10,32 @@ import pinikey from "/products-ge/pinikey.webp";
 import pellets from "/products-ge/pellets.webp";
 import magida from "/products-ge/magidis-zedapiri.webp";
 import paneli from "/products-ge/avejis-paneli.webp";
+//images en
+import wifeliEn from "/products-en/wifeli.webp";
+import rufEn from "/products-en/ruf.webp";
+import kibeEn from "/products-en/kibe.webp";
+import parketiEn from "/products-en/parketi.webp";
+import parketi2En from "/products-en/parketi2.webp";
+import pinikeyEn from "/products-en/pinikey.webp";
+import pelletsEn from "/products-en/pellets.webp";
+import magidaEn from "/products-en/magidis-zedapiri.webp";
+import paneliEn from "/products-en/avejis-paneli.webp";
 //styles
 import styles from "./ProductDetails.module.css";
 //components
 import CustomHeading from "../../helpers/CustomHeading";
 import WoodWeWorkWith from "../productsPage/WoodWeWorkWith";
+//language
+import { useTranslation } from "react-i18next";
 
 const productData = [
   {
     heading: "ფიცარი",
-    imgUrl: [wifeli],
+    imgUrlGe: [wifeli],
+    imgUrlEn: [wifeliEn],
     id: 1,
     textures: [
       { src: "/woods/beech.webp", id: 1, name: "წიფელი" },
-      // { src: "../woods/oak.webp", id: 2, name: "მუხა" },
-      // { src: "../woods/walnut.webp", id: 3, name: "კაკალი" },
-      // { src:"../woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
       { src: "/woods/pine.webp", id: 5, name: "ფიჭვი" },
       { src: "/woods/chestnut.webp", id: 6, name: "წაბლი" },
     ],
@@ -34,13 +43,13 @@ const productData = [
   },
   {
     heading: "საავეჯე პანელი",
-    imgUrl: [paneli],
+    imgUrlGe: [paneli],
+    imgUrlEn: [paneliEn],
     id: 2,
     textures: [
       { src: "/woods/beech.webp", id: 1, name: "წიფელი" },
       { src: "/woods/oak.webp", id: 2, name: "მუხა" },
       { src: "/woods/walnut.webp", id: 3, name: "კაკალი" },
-      // { src:"./eucaliptus.webp", id: 4, name: "ევკალიპტი" },
       { src: "/woods/pine.webp", id: 5, name: "ფიჭვი" },
       { src: "/woods/chestnut.webp", id: 6, name: "წაბლი" },
     ],
@@ -48,7 +57,8 @@ const productData = [
   },
   {
     heading: "საწვავი მასალა",
-    imgUrl: [pellets, pinikey, ruf],
+    imgUrlGe: [pellets, pinikey, ruf],
+    imgUrlEn: [pelletsEn, pinikeyEn, rufEn],
     id: 6,
     textures: [
       { src: "/woods/beech.webp", id: 1, name: "წიფელი" },
@@ -60,23 +70,10 @@ const productData = [
     ],
     text: "ვარჯი აწარმოებს სამი სახის საწვავ მასალას: ",
   },
-  // {
-  //   heading: "საავეჯე პანელი",
-  //   imgUrl: [paneli2],
-  //   id: 7,
-  //   textures: [
-  //     { src: "/woods/beech.webp", id: 1, name: "წიფელი" },
-  //     { src: "/woods/oak.webp", id: 2, name: "მუხა" },
-  //     { src: "/woods/walnut.webp", id: 3, name: "კაკალი" },
-  //     // { src:"/woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
-  //     { src: "/woods/pine.webp", id: 5, name: "ფიჭვი" },
-  //     { src: "/woods/chestnut.webp", id: 6, name: "წაბლი" },
-  //   ],
-  //   text: "მასალა: ქართული კაკალი, მუხა, წაბლი, ფიჭვი, წიფელა",
-  // },
   {
     heading: "ხის კიბე",
-    imgUrl: [kibe],
+    imgUrlGe: [kibe],
+    imgUrlEn: [kibeEn],
     id: 3,
     textures: [
       { src: "/woods/beech.webp", id: 1, name: "წიფელი" },
@@ -90,36 +87,37 @@ const productData = [
   },
   {
     heading: "მასიური პარკეტი",
-    imgUrl: [parketi],
+    imgUrlGe: [parketi],
+    imgUrlEn: [parketiEn],
     id: 4,
     textures: [
       { src: "/woods/beech.webp", id: 1, name: "წიფელი" },
       { src: "/woods/oak.webp", id: 2, name: "მუხა" },
       { src: "/woods/walnut.webp", id: 3, name: "კაკალი" },
       { src: "/woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
-      // { src: "/pine.webp", id: 5, name: "ფიჭვი" },
       { src: "/woods/chestnut.webp", id: 6, name: "წაბლი" },
     ],
     text: "მასიური პარკეტი იდეალურად მიესადაგება საკუთარი სახლის, კოტეჯის, აგარაკის იატაკის მოსაწყობად, პარკეტს გააჩნია უნიკალური სტრუქტურა და სილამაზე.  ლარიქსის მასიური პარკეტის ბუნებრივი შემადგენლობიდან გამომდინარე არ საჭიროებს ანტისეპტიკური ხსნარით დამუშავებას, მას არ ეკარება ხის მღრღნელები და მავნე მწერები.მასიური პარკეტი დამუშავებულია ყველა ნორმის დაცვით, გამომშრალია  თანამედროვე დანადგარებში. პროდუქციის ტენიანობა არ აღემატება 12%. ",
   },
   {
     heading: " ორშრიანი პარკეტი",
-    imgUrl: [parketi2],
+    imgUrlGe: [parketi2],
+    imgUrlEn: [parketi2En],
     id: 5,
     textures: [
       { src: "/woods/beech.webp", id: 1, name: "წიფელი" },
       { src: "/woods/oak.webp", id: 2, name: "მუხა" },
       { src: "/woods/walnut.webp", id: 3, name: "კაკალი" },
       { src: "/woods/eucaliptus.webp", id: 4, name: "ევკალიპტი" },
-      // { src: "/woods/pine.webp", id: 5, name: "ფიჭვი" },
       { src: "/woods/chestnut.webp", id: 6, name: "წაბლი" },
     ],
     text: "მასალა: ქართული კაკალი, მუხა, წაბლი, წიფელა, ევკალიპტი",
   },
   {
     heading: "მაგიდის ზედაპირები",
-    imgUrl: [magida],
-    id: 8,
+    imgUrlGe: [magida],
+    imgUrlEn: [magidaEn],
+    id: 7,
     textures: [
       { src: "/woods/beech.webp", id: 1, name: "წიფელი" },
       { src: "/woods/oak.webp", id: 2, name: "მუხა" },
@@ -133,6 +131,7 @@ const productData = [
 ];
 
 function ProductDetails() {
+  const { t, i18n } = useTranslation("productDetails");
   const { id } = useParams();
   return (
     <div className={styles.productDetails}>
@@ -144,17 +143,38 @@ function ProductDetails() {
           .filter((product) => parseInt(id) === product.id)
           .map((product) => (
             <div key={product.id} className={styles.productContainer}>
-              <CustomHeading>{product.heading}</CustomHeading>
-              <div className={styles.productImgContainer}>
-                {product.imgUrl.map((img) => (
-                  <img
-                    key={`${img} ${product.id}`}
-                    src={img}
-                    alt={`product ${product.id}`}
-                    className={styles.productImage}
-                  />
-                ))}
-                <p>{product.text}</p>
+              <CustomHeading>
+                {t(`productHeadings.heading${product.id}`)}
+              </CustomHeading>
+              <div
+                className={
+                  product.id === 6
+                    ? styles.fuelBriquette
+                    : styles.productImgContainer
+                }
+              >
+                <div className={styles.imagesContainer}>
+                  {i18n.language === "ge"
+                    ? product.imgUrlGe.map((img) => (
+                        <img
+                          key={`${img} ${product.id}`}
+                          src={img}
+                          alt={`product ${product.id}`}
+                          className={styles.productImage}
+                        />
+                      ))
+                    : product.imgUrlEn.map((img) => (
+                        <img
+                          key={`${img} ${product.id}`}
+                          src={img}
+                          alt={`product ${product.id}`}
+                          className={styles.productImage}
+                        />
+                      ))}
+                  <p className={styles.productText}>
+                    {t(`productDescription.descr${product.id}`)}
+                  </p>
+                </div>
               </div>
               <WoodWeWorkWith textures={product.textures} />
             </div>
