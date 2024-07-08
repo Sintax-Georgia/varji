@@ -42,7 +42,7 @@ function ContactPage() {
         </a>
       ),
       heading: "მისამართი",
-      text: "28 Ananuri Highway",
+      text: "დუშეთი, დაბა ჟინვალი. სოფელი ქვემო არანისი მე-13 ქუჩა N14",
       id: 3,
     },
     {

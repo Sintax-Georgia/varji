@@ -26,13 +26,20 @@ i18next.use(initReactI18next).init({
           heading7: "Table Surface",
         },
         productDescription: {
-          descr1: "plank",
-          descr2: "furniture panels",
-          descr3: "wooden steps",
-          descr4: "massive parquet",
-          descr5: "twolayer parquet",
-          descr6: "biquette",
-          descr7: "table surfaces",
+          descr1:
+            "It’s ideally suits repairing and constructing of uour estate,, cottage or country house. Due to the natural composition of larix (Listvinitsa) planks, it does not need to be treated with an antiseptic solution, it does not develop worms and is resistant to the effects of water, snow and sunlight.",
+          descr2:
+            "Ideal for finishing the interior walls and ceilings of your home, cottage and country house, the panel has a unique structure and beauty. Due to its natural composition, the wooden panel does not need to be treated with an antiseptic solution, it is not affected by wood rodents and harmful insects.",
+          descr3:
+            "Varji produces wooden steps of the highest quality and any design. They are made to order from Georgian oak, pine, chestnut and beech. Georgian products manufactured by Varji are exported to various countries in Europe and Asia.",
+          descr4:
+            "Massive parquet is ideal for decorating the floor of your own house, cottage, country house. Parquet has a unique structure and beauty. Due to the natural composition of the massive larch parquet, it does not need to be treated with an antiseptic solution, it is not affected by wood rodents and harmful insects. Moisture content of products does not exceed 12%.",
+          descr5:
+            "Massive parquet is ideal for decorating the floor of your own house, cottage, country house. Parquet has a unique structure and beauty. Due to the natural composition of the massive larch parquet, it does not need to be treated with an antiseptic solution, it is not affected by wood rodents and harmful insects. Moisture content of products does not exceed 12%.",
+          descr6:
+            "Fuel briquettes are made by pressing oak and beech dust and sawdust. Due to its high density, briquettes burn longer than firewood. 1 ton of fuel briquettes replaces five cubic meters of dry firewood. During the burning of 1000 kg of fuel briquettes, the same amount of thermal energy is generated as when burning 1600 kg of firewood, 478 cubic meters of gas, and 500 liters of fuel.",
+          descr7:
+            "The Varji company produces high-quality and custom-made table tops of any design. It is made from Georgian oak, pine, chestnut and beech. Georgian products manufactured by Varji are exported to various countries in Europe and Asia.",
         },
       },
       partners: {
@@ -76,7 +83,7 @@ i18next.use(initReactI18next).init({
           link4: "Contact",
         },
         list: {
-          item1: "Address: 27 str Varji,0179",
+          item1: "Address: სოფელი ქვემო არანისი მე-13 ქუჩა N14",
           item2: "Phone: +995 597 91 10 60",
           item3: "E-mail: wood@varji.ge",
         },
@@ -95,7 +102,7 @@ i18next.use(initReactI18next).init({
       },
       about: {
         heading: "ჩვენს შესახებ",
-        text: "ავეჯის მწარმოებელი კომპანია ვარჯი 25 წელია წარმატებით მოღვაწეობს საქართველოში. კომპანიის საავეჯე და სამშენებლო ხის მასალები ქართული კაკლის, მუხის, წაბლისა და წიფელას ბაზაზე მზადდება. 1999 წლიდან, ვარჯი აქცენტს მაღალ ხარისხზე აკეთებს, შედეგად პროდუქცია სრულად აკმაყოფილებს ევროპისა და აზიის ბაზრის მოთხოვნებს და კომპანია ექსპორტს სხვადასხვა ქვეყნებში ეწევა.",
+        text: "კომპანია ვარჯი საავეჯე და სამშენებლო ხის მასალების მწარმოებელი ქართული ბრენდია. ვარჯი ხის მასალას აწარმოებს ქართული კაკლის, მუხის, წაბლისა და წიფელას ბაზაზე.  25 წლიანი გამოცდილებით კომპანია აქცენტს მასალების უმაღლეს ხარისხზე აკეთებს, შედეგად პროდუქცია სრულად აკმაყოფილებს ევროპისა და აზიის ბაზრის მოთხოვნებს.",
         button: "მეტის ნახვა",
       },
       productDetails: {
@@ -109,13 +116,20 @@ i18next.use(initReactI18next).init({
           heading7: "მაგიდის ზედაპირი",
         },
         productDescription: {
-          descr1: "ვარჯი აწარმოებს ქართული წიფელის, წაბლისა და ფიჭვის ფიცარს.",
-          descr2: "ვარჯი აწარმოებს ქართული წიფელის, წაბლისა და ფიჭვის ფიცარს.",
-          descr3: "ვარჯი აწარმოებს ქართული წიფელის, წაბლისა და ფიჭვის ფიცარს.",
-          descr4: "ვარჯი აწარმოებს ქართული წიფელის, წაბლისა და ფიჭვის ფიცარს.",
-          descr5: "ვარჯი აწარმოებს ქართული წიფელის, წაბლისა და ფიჭვის ფიცარს.",
-          descr6: "ვარჯი აწარმოებს ქართული წიფელის, წაბლისა და ფიჭვის ფიცარს.",
-          descr7: "ვარჯი აწარმოებს ქართული წიფელის, წაბლისა და ფიჭვის ფიცარს.",
+          descr1:
+            "იდეალურად მიესადაგება საკუთარი სახლის, კოტეჯის, აგარაკის რემონტსა და მშენებლობაში, ლარიქსის (ლისტვინიცის) პლანკენის ბუნებრივი შემადგენლობიდან გამომდინარე არ საჭიროებს ანტისეპტიკური ხსნარით დამუშავებას, მას არ უჩნდება ჭია და უძლებს წყლის, თოვლის და მზის ზემოქმედებას.",
+          descr2:
+            "იდეალურია საკუთარი სახლის, კოტეჯისა და აგარაკის ინტერიერის კედლებისა და ჭერის მოსაპირკეთებლად, პანელს გააჩნია უნიკალური სტრუქტურა და სილამაზე. ხის პანელი ბუნებრივი შემადგენლობიდან გამომდინარე არ საჭიროებს ანტისეპტიკური ხსნარით დამუშავებას, მას არ ეკარება ხის მღრღნელები და მავნე მწერები.",
+          descr3:
+            "კომპანია ვარჯი აწარმოებს უმაღლესი ხარისხის და ნებისმიერი დიზაინის ხის საფეხურებს შეკვეთით მზადდება ქართული მუხისგან, ფიჭვისგან, წაბლისა და წიფელისგან  ვარჯის წარმოებული ქართული პროდუქციის ექსპორტი ევროპისა და აზიის სხვადასხვა ქვეყნებში ხდება.",
+          descr4:
+            "მასიური პარკეტი იდეალურად მიესადაგება საკუთარი სახლის, კოტეჯის, აგარაკის იატაკის მოსაწყობად, პარკეტს გააჩნია უნიკალური სტრუქტურა და სილამაზე. ლარიქსის მასიური პარკეტის ბუნებრივი შემადგენლობიდან გამომდინარე არ საჭიროებს ანტისეპტიკური ხსნარით დამუშავებას, მას არ ეკარება ხის მღრღნელები და მავნე მწერები.მასიური პარკეტი დამუშავებულია ყველა ნორმის დაცვით, გამომშრალია თანამედროვე დანადგარებში. პროდუქციის ტენიანობა არ აღემატება 12%.",
+          descr5:
+            "მასიური პარკეტი იდეალურად მიესადაგება საკუთარი სახლის, კოტეჯის, აგარაკის იატაკის მოსაწყობად, პარკეტს გააჩნია უნიკალური სტრუქტურა და სილამაზე. ლარიქსის მასიური პარკეტის ბუნებრივი შემადგენლობიდან გამომდინარე არ საჭიროებს ანტისეპტიკური ხსნარით დამუშავებას, მას არ ეკარება ხის მღრღნელები და მავნე მწერები.მასიური პარკეტი დამუშავებულია ყველა ნორმის დაცვით, გამომშრალია თანამედროვე დანადგარებში. პროდუქციის ტენიანობა არ აღემატება 12%.",
+          descr6:
+            "საწვავი ბრიკეტი იქმნება მუხისა და წიფელის მტვრისა და ნახერხის დაპრესვით. მაღალი სიმკვრივის გამო ბრიკეტის წვა უფრო დიდ ხანს გრძელდება ვიდრე შეშის. 1 ტონა საწვავის ბრიკეტი ანაცვლებს ხუთ კუბურ მეტრ მშრალ შეშას. 1000 კგ საწვავი ბრიკეტების დაწვის დროს წარმოიქმნება იგივე რაოდენობის თერმული ენერგია, რაც 1600 კგ შეშის, 478 კუბური მეტრი გაზის, 500 ლიტრი საწვავის დაწვისას.",
+          descr7:
+            "კომპანია ვარჯი აწარმოებს უმაღლესი ხარისხის და ნებისმიერი დიზაინის მაგიდის ზედაპირებს შეკვეთით. მზადდება ქართული მუხისგან, ფიჭვისგან, წაბლისა და წიფელისგან  ვარჯის წარმოებული ქართული პროდუქციის ექსპორტი ევროპისა და აზიის სხვადასხვა ქვეყნებში ხდება.",
         },
       },
       partners: {
@@ -159,7 +173,7 @@ i18next.use(initReactI18next).init({
           link4: "კონტაქტი",
         },
         list: {
-          item1: "მისამართი: 27 str Varji,0179",
+          item1: "მისამართი: სოფელი ქვემო არანისი მე-13 ქუჩა N14",
           item2: "ტელეფონი: +995 597 91 10 60",
           item3: "მეილი: wood@varji.ge",
         },
