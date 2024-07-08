@@ -23,7 +23,7 @@ const Map = () => {
   return (
     <div className={styles.mapContainer}>
       <MapContainer
-        center={[42.1154772, 44.769158]}
+        center={[42.114172, 44.771733]}
         zoom={13}
         scrollWheelZoom={false}
         style={{ width: "100%", height: "100%" }}
@@ -33,7 +33,7 @@ const Map = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        <Marker position={[42.1154772, 44.769158]}></Marker>
+        <Marker position={[42.114172, 44.771733]}></Marker>
       </MapContainer>
       {/* <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11838.50454576695!2d44.769158043136194!3d42.11547717381465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044f9db7cb960eb%3A0x90d6c625683837cf!2sKvemo%20Aranisi!5e0!3m2!1sen!2sge!4v1712483184564!5m2!1sen!2sge"
