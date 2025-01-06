@@ -83,7 +83,7 @@ i18next.use(initReactI18next).init({
           link4: "Contact",
         },
         list: {
-          item1: "Address: სოფელი ქვემო არანისი მე-13 ქუჩა N14",
+          item1: "Address: Village Kvemo Aranisi, 13th street, N14",
           item2: "Phone: +995 597 91 10 60",
           item3: "E-mail: wood@varji.ge",
         },

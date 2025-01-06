@@ -5,9 +5,20 @@ import styles from "./RootLayout.module.css";
 import Footer from "./footer/Footer";
 import ScrollToTop from "../helpers/ScrollToTop";
 import Menu from "./header/Menu";
+import { useTranslation } from "react-i18next";
 
 function RootLayout() {
   const [showMenu, setShowMenu] = useState(false);
+
+  const { i18n } = useTranslation("/");
+
+  const hostname = window.location.hostname;
+
+  if (hostname === "varji.eu") {
+    i18n.changeLanguage("en");
+  } else if (hostname === "varji.ge") {
+    i18n.changeLanguage("ka");
+  }
   return (
     <>
       {showMenu && (
