@@ -13,10 +13,11 @@ function RootLayout() {
   const { i18n } = useTranslation("/");
 
   const hostname = window.location.hostname;
+  console.log(hostname);
 
-  if (hostname === "varji.eu") {
+  if (hostname === "varji.eu" || hostname === "www.varji.eu") {
     i18n.changeLanguage("en");
-  } else if (hostname === "varji.ge") {
+  } else if (hostname === "varji.ge" || hostname === "www.varji.ge") {
     i18n.changeLanguage("ka");
   }
   return (

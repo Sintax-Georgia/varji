@@ -59,6 +59,12 @@
   .footerLogo {
     display: none;
   }
+  .footerContainer {
+    padding: 0 0 0 1rem;
+  }
+  .listContainer {
+    gap: 3rem;
+  }
 }
 
 @media only screen and (max-width: 767px) {

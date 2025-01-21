@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, Marker } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import styles from "./Map.module.css";
 const Map = () => {
@@ -33,7 +33,9 @@ const Map = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        <Marker position={[42.114172, 44.771733]}></Marker>
+        <Marker position={[42.114172, 44.771733]}>
+          <Popup>ქვემო არანისი მე-13 ქუჩა N14</Popup>
+        </Marker>
       </MapContainer>
       {/* <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11838.50454576695!2d44.769158043136194!3d42.11547717381465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044f9db7cb960eb%3A0x90d6c625683837cf!2sKvemo%20Aranisi!5e0!3m2!1sen!2sge!4v1712483184564!5m2!1sen!2sge"

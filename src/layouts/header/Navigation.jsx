@@ -10,15 +10,13 @@ import { IoLogoFacebook } from "react-icons/io5";
 import { IoMenu } from "react-icons/io5";
 import { MdLanguage } from "react-icons/md";
 
-// import { GrLanguage } from "react-icons/gr";
-
 //i18next
 import { useTranslation } from "react-i18next";
 
 function Navigation({ setShowMenu, showMenu }) {
   const { t, i18n } = useTranslation("navigation");
   const [isGreater, setIsGreater] = useState(window.innerWidth < 900);
-  const [language, setLanguage] = useState("ge");
+  const [language, setLanguage] = useState("");
   function handleResize() {
     if (window.innerWidth < 900) {
       setIsGreater(true);
@@ -30,10 +28,12 @@ function Navigation({ setShowMenu, showMenu }) {
   useEffect(() => {
     window.addEventListener("resize", handleResize);
 
+    handleResize();
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [window.innerWidth]);
+  }, []);
   return (
     <>
       <header className={styles.header}>

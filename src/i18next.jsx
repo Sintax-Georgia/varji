@@ -89,9 +89,10 @@ i18next.use(initReactI18next).init({
         },
         headings: {
           heading1: "Navigation",
-          heading2: "contact",
+          heading2: "Contact",
         },
       },
+      lng: "en",
     },
     ge: {
       navigation: {
